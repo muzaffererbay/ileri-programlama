@@ -1,0 +1,229 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('resim.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Konteynerler */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 2200px;
+    background: rgb(1, 20, 49);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Harita ve Anlık Hava Durumu Konteyneri */
+.map-and-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.map-container {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.current-weather {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.current-weather h1 {
+    margin-bottom: 15px;
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.controls input {
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+    font-size: 22px;
+}
+
+.controls button {
+    padding: 25px 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
+}
+
+.controls button:hover {
+    background-color: #555;
+}
+
+/* 24 Saatlik Tahmin */
+#forecastResult {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    max-height: 300px;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #333; /* Kaydırma çubuğu renkleri */
+}
+
+#forecastResult::-webkit-scrollbar {
+    height: 10px;
+}
+
+#forecastResult::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+#forecastResult::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    min-width: 150px;
+    font-size: 22px;
+}
+
+.weather-card img {
+    max-width: 50px;
+    margin: 10px 0;
+}
+
+/* 8 Günlük Grafik */
+#forecastChart {
+    width: 100%;
+    height: 130px;
+}
+
+/* Favori ve Öne Çıkan Şehirler */
+.cities-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.favorite-cities, .highlighted-cities {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.favorite-cities h2, .highlighted-cities h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.favorite-cities ul, .highlighted-cities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favorite-cities li, .highlighted-cities li {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.favorite-cities li img, .highlighted-cities li img {
+    max-width: 40px;
+    margin-right: 10px;
+
+}
+
+.favorite-cities button, .highlighted-cities button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+.favorite-cities button:hover, .highlighted-cities button:hover {
+    background-color: #555;
+}
+.add-favorite-btn {
+    padding: 25px 35px; /* Daha büyük boyutlar için iç boşlukları artır */
+    font-size: 22px; /* Yazı boyutunu büyüt */
+    background-color: #333; /* Butonun rengi */
+    color: white; /* Yazı rengi */
+    border: none; /* Kenarlıkları kaldır */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    cursor: pointer; /* İşaretçi göstergesi */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.add-favorite-btn:hover {
+    background-color: #555; /* Hover sırasında arka plan rengi */
+}
+.favorite-cities button.show-btn {
+    background-color: #008CBA; /* Butonun rengi */
+    margin-left: 10px; /* Sil butonuyla aralığı ayarlamak için */
+    font-size: 20px;
+
+}
+
+.favorite-cities button.show-btn:hover {
+    background-color: #005F73; /* Hover efekti */
+}
+
+
+.favorite-cities button,
+.highlighted-cities button {
+    margin-left: 10px; /* Butonlar arasında boşluk bırakır */
+}
+
+
+
+
+
+
+
+
+
+

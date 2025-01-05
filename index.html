@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Harita ve Şehir Seçimi + Anlık Hava Durumu -->
+    <div class="container map-and-weather">
+        <div class="map-container">
+            <h1>Harita ve Şehir Seçimi</h1>
+            <div id="map"></div>
+            <div class="controls">
+                <button id="getLocationWeatherBtn">Konumum</button>
+                <input type="text" id="cityInput" placeholder="Şehir adı girin...">
+                <button id="getWeatherBtn">Hava Durumunu Getir</button>
+            </div>
+        </div>
+        <div class="current-weather">
+            <h1>Anlık Hava Durumu</h1>
+            <div id="weatherResult"></div>
+        </div>
+    </div>
+
+    <!-- 5 Günlük Tahmin -->
+    <div class="container forecast-cards">
+        <h1>24 saatlik sıcaklık Tahmin</h1>
+        <div id="forecastResult"></div>
+    </div>
+
+    <!-- 5 Günlük Grafik -->
+    <div class="container forecast-graph">
+        <h1>Geçmiş 5 Günlük Sıcaklık - 8 Günlük Sıcaklık Tahmini Grafiği</h1>
+        <canvas id="forecastChart"></canvas>
+    </div>
+
+    <!-- Şehirler (Favoriler ve Öne Çıkanlar) -->
+    <div class="container featured-cities">
+        <h1>Şehirler</h1>
+        <div class="cities-container">
+            <!-- Favori Şehirler -->
+            <div class="favorite-cities">
+                <h2>Favori Şehirler</h2>
+                <ul id="favoriteCitiesList"></ul>
+            </div>
+            <!-- Öne Çıkan Şehirler -->
+            <div class="highlighted-cities">
+                <h2>Öne Çıkan Şehirler</h2>
+                <ul id="cityWeatherList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
